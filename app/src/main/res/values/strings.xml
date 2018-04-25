@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Projeto3</string>
+    <string name="send_sms">Envie um SMS</string>
+    <string name="quem_enviarSMSM">Para quem você quer enviar a mensagem?</string>
+    <string name="ajudante">Ajudante</string>
+    <string name="Rafael">Rafael</string>
+    <string name="Pai">Pai</string>
+    <string name="o_que_enviar">O que você quer enviar?</string>
+    <string name="agua">Preciso de agua</string>
+    <string name="comida">Preciso de comida!</string>
+    <string name="banheiro">Preciso ir ao banheiro!</string>
+    <string name="falar_com_vc">Preciso falar com você</string>
+    <string name="sos">Emergência!</string>
+    <string name="send">Enviar</string>
+</resources>
