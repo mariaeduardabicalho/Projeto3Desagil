@@ -36,6 +36,7 @@ public class Send extends AppCompatActivity {
 
                 SmsManager manager = SmsManager.getDefault();
                 manager.sendTextMessage(numero_d, null, mensagem_d, null, null);
+                Utils.showToast(Send.this, "Mensagem enviada!");
 
             }
         });
