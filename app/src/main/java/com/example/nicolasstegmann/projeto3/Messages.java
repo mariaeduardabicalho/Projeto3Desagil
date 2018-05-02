@@ -1,6 +1,8 @@
 package com.example.nicolasstegmann.projeto3;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +17,8 @@ public class Messages extends AppCompatActivity {
     private int number;
     public final static String mensagem = "id_mensagem_a_ser_enviada";
     public final static String numero = "id_numero_do_contato";
-
+    private SectionsStatePagerAdapter mSectionsStatePagerAdapter;
+    private ViewPager mViewPager;
 
     private void openSendActivity(String mensagem_e) {
         Intent intent1 = getIntent();
@@ -33,45 +36,25 @@ public class Messages extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
 
-        Button buttonagua = (Button) findViewById(R.id.button_agua);
-        Button buttonemergencia = (Button) findViewById(R.id.button_emergencia);
-        Button buttonfalar = (Button) findViewById(R.id.button_falar);
-        Button buttoncomida = (Button) findViewById(R.id.button_comida);
-        Button buttonbanheiro = (Button) findViewById(R.id.button_banheiro);
+        mSectionsStatePagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        mViewPager = (ViewPager) findViewById(R.id.container);
 
-        buttonagua.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSendActivity(agua);
-            }
-        });
+        setupViewPager(mViewPager);
 
-        buttonbanheiro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSendActivity(banheiro);
-            }
-        });
 
-        buttoncomida.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSendActivity(comida);
-            }
-        });
+    };
 
-        buttonemergencia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSendActivity(emergencia);
-            }
-        });
+    private void setupViewPager(ViewPager viewPager){
+        SectionsStatePagerAdapter adapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new Fragment_msg0(), "banheiro");
+        adapter.addFragment(new Fragment_msg1(), "comida");
+        adapter.addFragment(new Fragment_msg2(), "falar_comvc");
+        adapter.addFragment(new Fragment_msg3(), "agua");
+        adapter.addFragment(new Fragment_msg4(),"emergencia");
+        viewPager.setAdapter(adapter);
+    }
 
-        buttonfalar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSendActivity(falar);
-            }
-        });
+    public void setViewPager(int fragmentNumber) {
+        mViewPager.setCurrentItem(fragmentNumber);
     }
 }

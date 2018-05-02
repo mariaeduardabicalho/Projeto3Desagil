@@ -4,18 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ff5b09"
     tools:context=".MainActivity">
 
+
+
     <Button
-        android:id="@+id/sendSMSbutton"
-        android:layout_width="302dp"
-        android:layout_height="230dp"
-        android:layout_marginBottom="25dp"
-        android:text="@string/send_sms"
+        android:id="@+id/sendSMSmorse"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#c581e6"
+        android:text="@string/translate_sms"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendSMSbutton" />
+
+    <Button
+        android:id="@+id/sendSMSbutton"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="60dp"
+        android:background="#c581e6"
+        android:text="@string/send_sms"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="333dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/do_what"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

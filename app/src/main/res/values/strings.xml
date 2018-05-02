@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Projeto3</string>
-    <string name="send_sms">Envie um SMS</string>
+    <string name="send_sms">Envie um SMS já escrito</string>
     <string name="quem_enviarSMSM">Para quem você quer enviar a mensagem?</string>
     <string name="ajudante">Ajudante</string>
     <string name="Rafael">Rafael</string>
@@ -12,4 +12,10 @@
     <string name="falar_com_vc">Preciso falar com você</string>
     <string name="sos">Emergência!</string>
     <string name="send">Enviar</string>
+    <string name="translate_sms">Envie um SMS em morse</string>
+    <string name="do_what">O que você quer fazer?</string>
+    <string name="next_msg">Próxima mensagem</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

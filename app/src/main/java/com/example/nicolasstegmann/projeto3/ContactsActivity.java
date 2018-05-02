@@ -28,7 +28,7 @@ public class ContactsActivity extends AppCompatActivity {
 
         Button buttonajudante = (Button) findViewById(R.id.button_ajudante);
         Button buttonrafael = (Button) findViewById(R.id.button_rafael);
-        Button buttonpai = (Button) findViewById(R.id.button_pai);
+        //Button buttonpai = (Button) findViewById(R.id.button_pai);
 
         buttonajudante.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,12 +44,12 @@ public class ContactsActivity extends AppCompatActivity {
             }
         });
 
-        buttonpai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMessagesActivity(numero_pai);
-            }
-        });
+       // buttonpai.setOnClickListener(new View.OnClickListener() {
+           // @Override
+         //   public void onClick(View v) {
+        //        openMessagesActivity(numero_pai);
+        //    }
+      //  });
     }
 
 }
